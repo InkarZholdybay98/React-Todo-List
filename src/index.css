@@ -1,13 +1,173 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #ececec;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.NameTodoList {
+  background-color: #ffffff;
+  color: #282b44;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 80px 250px 150px;
+  justify-content: center;
+  gap: 3px;
+}
+
+form label {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+form input,
+form button {
+  border-radius: 5px;
+  border: none;
+  padding-left: 5px;
+}
+
+form input {
+  outline: none;
+}
+
+form button {
+  background-color: #21dab0;
+  color: white;
+  font-weight: bold;
+  transition: 0.1s ease-out;
+}
+
+form button:hover {
+  background-color: #2f957d;
+}
+
+.TodoForm,
+.todoList {
+  background-color: #25283f;
+  padding: 5px;
+}
+
+.TodoForm {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.todoList h3 {
+  text-align: center;
+  color: #dbdbdf;
+  margin-bottom: 20px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 80px 250px 150px;
+  gap: 3px;
+  margin-bottom: 5px;
+  padding: 8px;
+}
+
+li h4 {
+  color: #eeeff0;
+  word-wrap: break-word;
+}
+
+li input {
+  cursor: pointer;
+  width: 15px;
+}
+
+li button {
+  background-color: #ff7b7b;
+  border: none;
+  border-radius: 3px;
+  color: #eeeff0;
+  font-weight: bold;
+  transition: 0.1s ease-out;
+}
+
+li button:hover {
+  background-color: #d14242;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 541px) {
+  .todoList {
+    height: 50dvh;
+  }
+}
+
+@media (max-width: 503px) {
+  #root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 516px) {
+  form {
+    grid-template-columns: 80px 150px 130px;
+  }
+
+  li {
+    grid-template-columns: 80px 150px 130px;
+  }
+}
+
+@media (max-width: 404px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    grid-template-columns: 20px 120px 130px;
+  }
+
+  form input {
+    padding: 5px;
+  }
+
+  form button {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 304px) {
+  li {
+    grid-template-columns: 15px 120px 120px;
+  }
+}
+
+@media (max-width: 288px) {
+  li {
+    grid-template-columns: 15px 100px 100px;
+  }
 }
